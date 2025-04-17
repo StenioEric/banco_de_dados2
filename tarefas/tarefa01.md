@@ -41,7 +41,18 @@ Tabelas:
 
 Consulta:
 
-```sql
 SELECT * 
 FROM cliente 
 NATURAL JOIN pedido;
+
+
+## CROSS JOIN
+
+O `CROSS JOIN` (ou produto cartesiano) combina **todas as linhas da primeira tabela com todas as linhas da segunda**. Pode ser útil para gerar combinações, mas deve ser usado com cuidado por gerar muitos resultados.
+
+### Exemplo:
+```sql
+SELECT f.nome, d.descricao
+FROM funcionario f
+CROSS JOIN departamento d;
+
