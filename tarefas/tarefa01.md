@@ -10,6 +10,7 @@
 - Questão 7: https://github.com/StenioEric/banco_de_dados2/blob/main/tarefas/tarefa01-q07.sql
 - Questão 13: https://github.com/StenioEric/banco_de_dados2/blob/main/tarefas/tarefa01-q13.sql
 - Questão 16: https://github.com/StenioEric/banco_de_dados2/blob/main/tarefas/tarefa01-q16.sql
+<<<<<<< HEAD
 
 
 # NATURAL JOIN e CROSS JOIN em SQL
@@ -77,3 +78,5 @@ FROM funcionario;
 
 Essas funções são altamente poderosas para análises avançadas em SQL.
 
+=======
+>>>>>>> 0a2be92 (feat: adicionados links com as resoluções das questões)
