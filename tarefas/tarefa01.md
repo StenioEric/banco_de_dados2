@@ -55,5 +55,26 @@ O `CROSS JOIN` (ou produto cartesiano) combina **todas as linhas da primeira tab
 SELECT f.nome, d.descricao
 FROM funcionario f
 CROSS JOIN departamento d;
+```
+
+## Window Functions no PostgreSQL
+
+As `Window Functions` permitem aplicar funções agregadas **sem agrupar os dados**, mantendo o contexto linha a linha. São ideais para calcular rankings, totais acumulados, comparações dentro de grupos, etc.
+
+### Exemplo 1: Ranking de salários
+```sql
+SELECT nome, salario,
+       RANK() OVER (ORDER BY salario DESC) AS ranking
+FROM funcionario;
+```
+
+### Exemplo 2: Maior salário por departamento
+```sql
+SELECT nome, salario, cod_depto,
+       MAX(salario) OVER (PARTITION BY cod_depto) AS max_salario_no_depto
+FROM funcionario;
+```
+
+Essas funções são altamente poderosas para análises avançadas em SQL.
 
 >>>>>>> a7cf2c2 (feat: questão 5.f da lista #1)
